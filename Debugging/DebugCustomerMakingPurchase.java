@@ -2,10 +2,11 @@ public class DebugCustomerMakingPurchase extends DebugCustomer
 {
     private double amountOfPurchase;
     private boolean overLimit;
-    private FixDebugCustomerMakingPurchase(int id,
-       String name, double credit, double purchAmount)
+    public DebugCustomerMakingPurchase(int id,
+                                       String name, double credit, double purchAmount)
     {
-       amountOfPurchase = purchAmount;
+        super(id, name, credit);
+        amountOfPurchase = purchAmount;
        if(amountOfPurchase > creditLimit)
           overLimit = true;
        else
